@@ -40,8 +40,8 @@ namespace JustABackup.PluginRepository
             .AddCookie()
             .AddOAuth("GitHub", options =>
             {
-                options.ClientId = "d438ce43598bd6fd957e";
-                options.ClientSecret = "5b1f10a74e00bb5560d9fbb72abb7665f0763a15";
+                options.ClientId = Configuration["GitHub:ClientID"];
+                options.ClientSecret = Configuration["GitHub:ClientSecret"];
                 options.CallbackPath = new PathString("/auth/github");
 
                 options.AuthorizationEndpoint = "https://github.com/login/oauth/authorize";
