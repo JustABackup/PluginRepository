@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace JustABackup.PluginRepository.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         public IActionResult Index()

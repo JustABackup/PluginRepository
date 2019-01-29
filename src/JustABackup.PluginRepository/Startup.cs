@@ -70,7 +70,11 @@ namespace JustABackup.PluginRepository
                         context.RunClaimActions(user);
                     }
                 };
+            });
 
+            services.AddRouting(options => {
+                options.AppendTrailingSlash = true;
+                options.LowercaseUrls = true;
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
